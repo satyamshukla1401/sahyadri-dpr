@@ -1,6 +1,6 @@
 /* Caches only the small app shell so the icon opens instantly. The form itself always loads live from Apps Script. */
-var CACHE = 'dpr-shell-v3';
-var SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'cover-logo.png', 'apple-touch-icon.png'];
+var CACHE = 'dpr-shell-v4';
+var SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'cover-logo.png', 'cover-logo.webp', 'apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
 });
